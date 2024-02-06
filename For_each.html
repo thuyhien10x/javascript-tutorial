@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numbers = [45, 4, 9, 16, 25];
+        let txt ="";
+        // dung value de in ra gia tri, index de biet chi so cua phan tu trong mang, array de tham chieu tung phan tu trong mang voi cai khac
+        function myFunction(value, index, array) {
+            console.log(value);
+        }
+        numbers.forEach(myFunction);
+        console.log('vi du dung index')
+        //forEach(function) function de co chuc nang rieng con foreach la tham chieu den tung phan tu cua mang, va goi cung function
+        function findElementGreaterThanTen(value,index,array) {
+            if (value>10) {
+                console.log('Element '+ value +' at index ' + index + ' is gretater than 10 in the ' + array);
+            }
+        }
+        numbers.forEach(findElementGreaterThanTen);
+
+        //array la goi ca mang y ra
+    </script>
+</body>
+</html>
