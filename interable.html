@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterable</title>
+</head>
+<body>
+    <script>
+        console.log('for in va for of dung de loop through interable object: vi du map,  string or maybe an array');
+        const name ="hien";
+        for (const x of name) {
+            console.log(x);
+        }
+        const letters = ["a","b","c"];
+        for (const x of letters) {
+            console.log(x);
+
+        }
+        const fruits = new Map([
+            ["apples", 500],
+            ["bananas", 300],
+        ])
+        for (const  y of fruits) {
+            console.log(y);
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
