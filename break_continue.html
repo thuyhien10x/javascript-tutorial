@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>break and continue</title>
+</head>
+<body>
+    <script>
+        console.log('vi du voi break');
+        for (let i = 0; i<10; i++){
+            if(i*3 === 9) {break;}
+            console.log(i);
+
+        }
+        console.log('vi du voi break a block code');
+        const cars = ["BMW", "Volvo", "Saab", "Ford"];
+        hien: {
+            console.log(cars[0]);
+            console.log(cars[1]);
+            break hien;
+            console.log(cars[2]);
+            console.log(cars[3]);
+
+        }
+    </script>
+    
+</body>
+</html>
