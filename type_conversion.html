@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Conversion</title>
+</head>
+<body>
+    <script>
+        //cai nay de doi  string thanh number
+        let x = "3,14";
+        console.log(typeof(x));
+        console.log(' khong chuyen string sang varieble neu no la chu');
+      
+        Number(x);
+        console.log(typeof(x));
+
+        x = parseFloat(x);
+        console.log(typeof(x));
+        console.log('convert number to string');
+        let z = 100;
+        z = String(z);
+        console.log(typeof(z));
+        console.log('convert date to number');
+        d = new Date();
+        d = Number(d);
+        console.log(typeof(d));
+        console.log('convert dates to string');
+        console.log((Date()));
+        console.log('convert boolean to numbers');
+        console.log(Number(false));
+        console.log(String(false));
+
+
+
+    </script>
+    
+</body>
+</html>
