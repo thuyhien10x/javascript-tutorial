@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Example</title>
+</head>
+<body>
+    <script>
+        //create a map
+        const dictionary = new Map([
+                ["apple", 'tao'],
+                ["watermelon",'dua hau'],
+                ["cat",'con meo']
+            ]);
+        //get de lay gia tri cua key cua 1 map
+        console.log(dictionary.get('apple'));
+        console.log(dictionary.size);
+        dictionary.delete("apple");
+        console.log(dictionary.has("apples"));
+        
+        //cai nay la iterior dung de in ra may thu trong maps ma ko can dung for each
+        for (const x of dictionary) {
+            console.log(x);
+        }
+        // con neu dung for each thi can phai co value, key
+        dictionary.forEach(function(value,key) {
+            console.log(key +" "+value);
+        })
+    </script>
+</body>
+</html>
