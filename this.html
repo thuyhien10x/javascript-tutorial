@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 2304,
+        fullName: function() {
+            return this.firstName +" " + this.lastName;
+    }
+    };
+    console.log(person.fullName());
+    console.log('khai bao bien = this, no se in ra object window- cai ma cho phep truy cap den dom');
+    let x = this;
+    console.log(x);
+
+    console.log('khi ma return this chinh la return ca object');
+    const hien = {
+    firstName  : "thuy",
+    lastName   : "le",
+    id         : 1203,
+    myFunction : function() {
+    return this;
+    }
+};
+    console.log(hien.myFunction());
+    console.log('dung this de chinh sua chinh no');
+    
+    </script>
+</body>
+</html>
