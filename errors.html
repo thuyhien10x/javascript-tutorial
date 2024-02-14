@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throw try catch</title>
+</head>
+<body>
+    <script>
+    console.log("The try statement defines a code block to run.\nThe catch statement defines a code block to handle any error.\nThe finally statement defines a code block to run regardless of the result.\nThe throw statement defines a custom error.");
+    try {
+        adddlert("Welcome to my home");
+        
+    }catch(err) {
+        console.log(err.message);
+    }
+    console.log('The throw statement allows you to create a custom error.');
+    function gaugau(){
+        var x = prompt("Nhap so nguyen lon hon 5 va nho hon 10: ");
+        try {
+            if (x.trim()=="") throw "empty";
+            if (isNaN(x)) throw "not a number";
+            x = Number(x);
+            if(x<5) throw "too low";
+            if(x>10) throw "too high";
+        }catch(err) {
+            console.log("Input is " + err);
+        }
+    }
+    gaugau();
+    </script>
+</body>
+</html>
