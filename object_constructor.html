@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('muon tao nhieu instance thi thay vi dung const person... thi dug object constructor cho nhanh');
+        //Constructor function for Person objects
+        function Person(first, last, age, eye) {
+            this.firstName =first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+        }
+        //Create a Person object
+        const Hien = new Person ('Hien','Le',21,'brown');
+
+        //Display age
+        console.log('Hien is '+ Hien.age + ".");
+
+        //Add a name method to object
+        Hien.hoTen = function() {
+            return this.firstName +" " +this.lastName;
+        };
+
+        //Display Name
+        console.log(Hien.hoTen());
+
+        //you can not add new propery to a constructor function but only add for 1 nguoi cu the
+       // person.nationality="english";
+
+        //console.log(Hien.nationality);
+
+        // ma chung ta phai add vao person object
+        function Nguoi (ho, ten, tuoi, mauDa) {
+            this.ho = ho;
+            this.ten = ten;
+            this.tuoi = tuoi;
+            this.mauDa= mauDa;
+            this.hoVaTen = function() {
+                return this.ho +" "+this.ten;
+            }
+            this.changeName = function(newName) {
+                this.ten = newName; 
+            }
+        }
+        const myMother = new Nguoi('Le','Dung',50,'trang');
+        console.log(myMother.hoVaTen());
+        //change name, phai cho cai function vao cai constructor moi dung duoc
+        myMother.changeName('Nguyen');
+        console.log(myMother.hoVaTen());
+    </script>
+</body>
+</html>
