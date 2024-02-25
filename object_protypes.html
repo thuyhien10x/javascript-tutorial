@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //to add a new property to a constructor, you must add it to the constructor function
+        function Person(first, last, age, eyecolor) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eyecolor;
+            this.nationality = "English";
+}
+const myMother = new Person("Sally", "Rally", 48, "green");
+console.log(myMother.nationality);
+
+console.log('co the add new property if use prototype');
+Person.prototype.hobby = "Singing";
+console.log(myMother.hobby);
+
+console.log('co the add new method if use prototype');
+
+    </script>
+</body>
+</html>
