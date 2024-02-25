@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('set hold any value of any data type');
+        const letters = new Set(['a','b','c']);
+        letters.forEach(function(value) {
+            console.log(value);
+        });
+        // Create an Iterator
+        const myIterator = letters.values();
+
+        // List all Values
+        for (const entry of myIterator) {
+        console.log(entry);
+        }
+    </script>
+    
+</body>
+</html>
