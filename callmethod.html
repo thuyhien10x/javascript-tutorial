@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        console.log('call method use to invoke a method- va coi object nhu la 1 tham so');
+        const person = {
+            hoVaTen: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        const person1 = {
+            firstName: "Hien",
+            lastName: "Le",
+        }
+        console.log(person.hoVaTen.call(person1));
+
+        console.log('hoac chung ta co the dung cach khac la khai bao function trong function');
+        function Nguoi(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+            this.fullName = function () {
+                return this.firstName + " " + this.lastName;
+            };
+        }
+        const my = new Nguoi("Vu", "My", "21", "nau");
+        console.log(my.fullName());
+
+        console.log('co the dung call method witth tham so ');
+        const human = {
+            fullName: function(city, country) {
+                return this.firstName + " "+this.lastName +","+"city"+" "+country;
+            }
+        }
+        console.log(human.fullName.call(person1, "Oslo", "Norway"));
+
+
+    </script>
+</body>
+</html>
